@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Printed work, flyers, packaging, and brand creations by A&D Creations.">
+  <title>Our Work — A&D Creations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="portfolio.css">
+  <script src="script.js" defer></script>
+  <script src="work.js" defer></script>
+</head>
+<body class="portfolio-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="index.html#top" aria-label="A&D Creations home"><span class="wordmark-mark">A<span>&</span>D</span><span class="wordmark-caption">CREATIVE STUDIO</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span></button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a href="work.html" aria-current="page">Work</a><a href="index.html#pricing">Services & pricing</a><a href="index.html#quote">Get a quote</a><a href="feedback.html">Reviews</a>
+      <a class="nav-contact" href="index.html#contact">Let's talk <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="portfolio-hero section-wrap">
+      <div>
+        <p class="eyebrow"><span class="status-dot"></span> PRINTED WITH PURPOSE</p>
+        <h1>Things we've<br>made <em>real.</em></h1>
+        <p class="portfolio-intro">A growing collection of flyers, posters, packaging, business stationery, and brand pieces created for good people with big ideas.</p>
+      </div>
+      <div class="portfolio-mark" aria-hidden="true"><span>WORK</span><strong>↘</strong></div>
+    </section>
+
+    <section class="portfolio-content section-wrap">
+      <div class="portfolio-toolbar">
+        <div class="portfolio-filters" role="group" aria-label="Filter work">
+          <button class="filter-button is-active" type="button" data-filter="all">All work</button>
+          <button class="filter-button" type="button" data-filter="flyers">Flyers</button>
+          <button class="filter-button" type="button" data-filter="print">Print & stationery</button>
+          <button class="filter-button" type="button" data-filter="branding">Branding</button>
+        </div>
+        <span class="work-count" id="work-count" aria-live="polite"></span>
+      </div>
+      <div class="portfolio-grid" id="portfolio-grid" aria-live="polite"></div>
+      <p class="empty-work" id="empty-work" hidden>No work in this category yet.</p>
+    </section>
+
+    <section class="add-work section-wrap" id="add-work">
+      <div class="add-work-copy">
+        <p class="eyebrow">KEEP THE WALL GROWING</p>
+        <h2>Add your<br><em>latest work.</em></h2>
+        <p>Add a picture of a flyer, printed piece, or project you want to show here. Your additions are saved in this browser.</p>
+      </div>
+      <form class="add-work-form" id="add-work-form">
+        <label class="quote-field">Project name<input id="work-title" name="title" type="text" placeholder="e.g. Sunday brunch flyer" required maxlength="60"></label>
+        <label class="quote-field">Type<select id="work-category" name="category" required><option value="flyers">Flyers</option><option value="print">Print & stationery</option><option value="branding">Branding</option></select></label>
+        <label class="quote-field">Short description<span>optional</span><textarea id="work-description" name="description" rows="3" placeholder="A line about what you created" maxlength="140"></textarea></label>
+        <label class="upload-field" for="work-image"><span class="upload-icon">＋</span><span><strong>Choose an image</strong><small>JPG, PNG, WEBP, or GIF · 5MB max</small></span><input id="work-image" name="image" type="file" accept="image/*" required></label>
+        <p class="upload-name" id="upload-name">No image selected</p>
+        <button class="button button-lime" type="submit">Add to our work <span aria-hidden="true">↗</span></button>
+        <p class="form-message" id="form-message" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>© <span id="year"></span> A&D Creations</span><span>MADE WITH INTENTION <span class="footer-heart">♥</span></span><a href="index.html">BACK TO THE STUDIO ↗</a></footer>
+</body>
+</html>
